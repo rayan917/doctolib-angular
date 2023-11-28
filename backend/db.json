@@ -1,0 +1,45 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "john"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "password": "jane"
+
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Smith",
+      "specialty": "Cardiologist"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Johnson",
+      "specialty": "Dermatologist"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "doctorId": 1,
+      "date": "2023-12-01",
+      "time": "10:00 AM"
+    },
+    {
+      "id": 2,
+      "patientId": 2,
+      "doctorId": 2,
+      "date": "2023-12-02",
+      "time": "02:30 PM"
+    }
+  ]
+}
