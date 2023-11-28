@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "patientId": 2,
+      "patientId": null,
       "doctorId": 2,
       "date": "2023-12-02",
       "time": "02:30 PM",
