@@ -32,14 +32,16 @@
       "patientId": 1,
       "doctorId": 1,
       "date": "2023-12-01",
-      "time": "10:00 AM"
+      "time": "10:00 AM",
+      "available": false
     },
     {
       "id": 2,
       "patientId": 2,
       "doctorId": 2,
       "date": "2023-12-02",
-      "time": "02:30 PM"
+      "time": "02:30 PM",
+      "available": true
     }
   ]
 }
