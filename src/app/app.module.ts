@@ -5,16 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { HomeComponent } from './home/home.component';
+import { AppointmentDetailComponent } from './appointment-detail/appointment-detail.component';
+import { MyAppointmentsComponent } from './my-appointments/my-appointments.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AppointmentListComponent,
+    HomeComponent,
+    AppointmentDetailComponent,
+    MyAppointmentsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
