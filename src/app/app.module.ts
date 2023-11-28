@@ -9,6 +9,8 @@ import { AppointmentListComponent } from './appointment-list/appointment-list.co
 import { HomeComponent } from './home/home.component';
 import { AppointmentDetailComponent } from './appointment-detail/appointment-detail.component';
 import { MyAppointmentsComponent } from './my-appointments/my-appointments.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { MyAppointmentsComponent } from './my-appointments/my-appointments.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
