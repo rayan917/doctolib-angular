@@ -20,7 +20,7 @@
         <a routerLink="/page" class="text-sm font-semibold leading-6 text-gray-900">Available appointments</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a routerLink="/page" class="text-sm font-semibold leading-6 text-gray-900">Log out<span aria-hidden="true">&rarr;</span></a>
+        <a (click)="logout()" class="text-sm font-semibold leading-6 text-gray-900">Log out<span aria-hidden="true">&rarr;</span></a>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -48,7 +48,7 @@
               <a routerLink="/page" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Available appointments</a>
             </div>
             <div class="py-6">
-              <a routerLink="/page" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log out</a>
+              <a (click)="logout()" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log out</a>
             </div>
           </div>
         </div>
