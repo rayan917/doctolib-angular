@@ -1,4 +1,4 @@
-<header class="absolute inset-x-0 top-0 z-50">
+<header class=" inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
@@ -15,12 +15,13 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a routerLink="/page" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-        <a routerLink="/page" class="text-sm font-semibold leading-6 text-gray-900">My appointments</a>
-        <a routerLink="/page" class="text-sm font-semibold leading-6 text-gray-900">Available appointments</a>
+        <a routerLink="/home" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+        <a routerLink="/home/my-appointments" class="text-sm font-semibold leading-6 text-gray-900">My appointments</a>
+        <a routerLink="/home/appointments-list" class="text-sm font-semibold leading-6 text-gray-900">Available appointments</a>
+        <a routerLink="/home/profile" class="text-sm font-semibold leading-6 text-gray-900">My profile</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a (click)="logout()" class="text-sm font-semibold leading-6 text-gray-900">Log out<span aria-hidden="true">&rarr;</span></a>
+        <a (click)="logout()" routerLink="/login" class="text-sm font-semibold leading-6 text-gray-900">Log out</a>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -48,7 +49,7 @@
               <a routerLink="/page" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Available appointments</a>
             </div>
             <div class="py-6">
-              <a (click)="logout()" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log out</a>
+              <a (click)="logout()"  routerLink="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log out</a>
             </div>
           </div>
         </div>

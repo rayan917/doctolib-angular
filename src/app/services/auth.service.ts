@@ -30,13 +30,10 @@ export class AuthService {
     return localStorage.getItem('user');
   }
 
-  saveUser() {
-    localStorage.setItem('user', '' + this.user?.id);
-  }
 
   isUserConnected() {
     if (this.user) {
-      this.saveUser();
+      this.savePatient();
       return true;
     } else if (this.getSavedPatient()) {
       this.getSavedPatientInfo().subscribe((user: any) => {

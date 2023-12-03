@@ -29,7 +29,7 @@ export class LoginComponent {
       if (user.length === 0) alert('Erreur dans le pseudo ou le mot de passe');
       this.authService.user = user[0];
       if (!this.authService.user) return;
-      this.authService.saveUser();
+      this.authService.savePatient();
       this.router.navigate(['/home']);
     }, () => {
       alert('Erreur dans la requête');
