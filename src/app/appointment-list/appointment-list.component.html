@@ -4,26 +4,19 @@
     <div class="flex flex-wrap -mx-4">
       <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-4 px-4" *ngFor="let appoint of appointments">
         <div class="max-w-md mx-auto bg-white rounded-md overflow-hidden shadow-md">
-          <!-- Contenu de la carte -->
           <div class="p-4">
-            <!-- Nom du médecin -->
-            <h3 class="text-xl font-bold mb-2">Dr. {{ appoint.doctorName }}</h3>
+            <h3 class="text-xl font-bold mb-2">{{ appoint.doctor?.name }}</h3>
   
-            <!-- Jour du rendez-vous -->
             <p class="text-gray-600 mb-2">Jour du rendez-vous : {{appoint.date }}</p>
   
-            <!-- Heure du rendez-vous -->
             <p class="text-gray-600 mb-2">Heure du rendez-vous : {{ appoint.time }}</p>
   
-            <!-- Catégorie de médecin -->
-            <p class="text-blue-500 font-semibold mb-2">{{ appoint.specialty }}</p>
+            <p class="text-blue-500 font-semibold mb-2">{{ appoint.doctor?.specialty }}</p>
   
-            <!-- Indication de disponibilité -->
             <p class="text-green-500 font-semibold mb-4">
               {{ appoint.available ? 'Disponible' : 'Non disponible' }}
             </p>
   
-            <!-- Bouton "Réservez le rendez-vous" -->
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
               Réservez le rendez-vous
             </button>

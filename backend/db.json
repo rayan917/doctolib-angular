@@ -5,15 +5,18 @@
       "name": "John Doe",
       "email": "john.doe@example.com",
       "password": "john",
-      "birthdate": "12-06-2000"
+      "birthdate": "12-06-2000",
+      "phone": "0601020307",
+      "address": "45 Allée des oisea"
     },
     {
       "id": 2,
       "name": "Jane Doe",
       "email": "jane.doe@example.com",
       "password": "jane",
-      "birthdate": "22-01-2000"
-
+      "birthdate": "22-01-2000",
+      "phone": "0706050403",
+      "address": "72 chemin de l'avenir"
     }
   ],
   "doctors": [
@@ -21,16 +24,15 @@
       "id": 1,
       "name": "Dr. Smith",
       "specialty": "Cardiologist",
-      "address":"23 Rue de Paris",
+      "address": "23 Rue de Paris",
       "conventioned": true,
       "payment": "Credit card"
-
     },
     {
       "id": 2,
       "name": "Dr. Johnson",
       "specialty": "Dermatologist",
-      "address":"55 Rue de Limoges",
+      "address": "55 Rue de Limoges",
       "conventioned": false,
       "payment": "Cash"
     }
@@ -46,8 +48,8 @@
     },
     {
       "id": 3,
-      "patientId": 3,
-      "doctorId": 3,
+      "patientId": 1,
+      "doctorId": 1,
       "date": "2023-12-03",
       "time": "12:00 PM",
       "available": false
@@ -55,23 +57,23 @@
     {
       "id": 4,
       "patientId": null,
-      "doctorId": 4,
+      "doctorId": 1,
       "date": "2023-12-04",
       "time": "01:00 PM",
       "available": true
     },
     {
       "id": 5,
-      "patientId": null,
-      "doctorId": 5,
+      "patientId": 1,
+      "doctorId": 2,
       "date": "2023-12-05",
       "time": "02:00 PM",
-      "available": true
+      "available": false
     },
     {
       "id": 6,
       "patientId": null,
-      "doctorId": 6,
+      "doctorId": 2,
       "date": "2023-12-06",
       "time": "03:00 PM",
       "available": true
@@ -79,7 +81,7 @@
     {
       "id": 7,
       "patientId": 7,
-      "doctorId": 7,
+      "doctorId": 1,
       "date": "2023-12-07",
       "time": "04:00 PM",
       "available": false
@@ -87,7 +89,7 @@
     {
       "id": 8,
       "patientId": null,
-      "doctorId": 8,
+      "doctorId": 2,
       "date": "2023-12-08",
       "time": "05:00 PM",
       "available": true
@@ -95,7 +97,7 @@
     {
       "id": 9,
       "patientId": null,
-      "doctorId": 9,
+      "doctorId": 1,
       "date": "2023-12-09",
       "time": "06:00 PM",
       "available": true
@@ -103,7 +105,7 @@
     {
       "id": 10,
       "patientId": null,
-      "doctorId": 10,
+      "doctorId": 1,
       "date": "2023-12-10",
       "time": "07:00 PM",
       "available": true
@@ -111,7 +113,7 @@
     {
       "id": 11,
       "patientId": null,
-      "doctorId": 11,
+      "doctorId": 2,
       "date": "2023-12-11",
       "time": "08:00 PM",
       "available": true

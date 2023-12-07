@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppointmentsService } from '../services/appointments.service';
 import { Appointment } from '../interfaces/appointment';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-appointment-list',
@@ -11,14 +12,18 @@ import { CommonModule } from '@angular/common';
   standalone: true
 })
 export default class AppointmentListComponent implements OnInit {
-  public appointments:any;
+  public appointments?:Appointment[];
 
-  constructor(private appointmentsService: AppointmentsService) {}
+  constructor(private appointmentsService: AppointmentsService, private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.appointmentsService.getAvailableAppointments().subscribe((appointments: Appointment[]) =>{
+    this.appointmentsService.getAvailableAppointmentsWithDoctorInfo().subscribe((appointments: Appointment[]) =>{
       this.appointments = appointments;
       console.log('appointments',appointments);
-    })
+    });
+
+
   }
+
+
 }

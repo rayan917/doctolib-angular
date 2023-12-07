@@ -44,7 +44,7 @@ export class AuthService {
     return false;
   }
 
-  private getSavedPatientInfo() {
+  public getSavedPatientInfo() {
     return this.http.get('http://localhost:3000/patients?id=' + this.getSavedPatient());
   }
 

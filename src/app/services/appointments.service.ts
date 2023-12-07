@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, forkJoin, map, switchMap } from 'rxjs';
 import { Appointment } from '../interfaces/appointment';
+import { Doctor } from '../interfaces/doctor';
 
 
 
@@ -13,13 +14,50 @@ export class AppointmentsService {
 
   
   constructor(private http: HttpClient) { }
+  private appointmentsUrl = 'http://localhost:3000/appointments';
 
-
-  getAvailableAppointments(): Observable<Appointment[]> {
-    return this.http.get<Appointment[]>('http://localhost:3000/appointments').pipe(
-      map((appointments: Appointment[]) => appointments.filter(appointment => appointment.available === true))
+  getAvailableAppointmentsWithDoctorInfo(): Observable<Appointment[]> {
+    return this.http.get<Appointment[]>(`${this.appointmentsUrl}`).pipe(
+      switchMap((appointments: Appointment[]) => {
+        const observables = appointments.map(appointment =>
+          this.getDoctorInfo(appointment.doctorId).pipe(
+            map(doctor => ({
+              ...appointment,
+              doctor,
+            }))
+          )
+        );
+        return forkJoin(observables);
+      }),
+      map((appointmentsWithDoctor: Appointment[]) =>
+        appointmentsWithDoctor.filter(appointment => appointment.available === true)
+      )
     );
   }
+
+  private getDoctorInfo(doctorId: number): Observable<Doctor> {
+    return this.http.get<Doctor>(`http://localhost:3000/doctors/${doctorId}`);
+  }
+
+  getMyAppointments(patientId: number): Observable<any[]> {
+    const patientAppointmentsUrl = `${this.appointmentsUrl}?patientId=${patientId}`;
+
+    return this.http.get<Appointment[]>(patientAppointmentsUrl).pipe(
+      switchMap((appointments: Appointment[]) => {
+        const observables = appointments.map(appointment =>
+          this.getDoctorInfo(appointment.doctorId).pipe(
+            map(doctor => ({
+              ...appointment,
+              doctor,
+            }))
+          )
+        );
+        return forkJoin(observables);
+      })
+    );
+  }
+
+  
 }
 
 

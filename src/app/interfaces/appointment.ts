@@ -1,3 +1,5 @@
+import { Doctor } from "./doctor";
+
 export interface Appointment {
     id: number;
     available: boolean;
@@ -5,4 +7,5 @@ export interface Appointment {
     doctorId: number;
     patientId: number;
     time: string;
+    doctor?: Doctor
 }
