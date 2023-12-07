@@ -57,6 +57,16 @@ export class AppointmentsService {
     );
   }
 
+  userTakeAppointments(appointment:Appointment,patientId:number){
+    const updatedAppointment: Appointment = {
+      ...appointment,
+      available: false,
+      patientId:patientId
+    };
+    
+    return this.http.put(`${this.appointmentsUrl}/${updatedAppointment.id}`, updatedAppointment);
+  }
+
   
 }
 

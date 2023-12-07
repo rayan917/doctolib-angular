@@ -21,6 +21,10 @@ export class RegisterComponent implements OnInit {
    ngOnInit(): void {
     this.registerForm = this.fb.group({
       email: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      birthdate:new FormControl('',Validators.required),
+      phone:new FormControl('',Validators.required),
+      address:new FormControl('',Validators.required),
       password: new FormControl('', [Validators.required, Validators.minLength(4)]),
       confirmPassword: new FormControl('', Validators.required),
     }, { validators: this.checkPasswords });
@@ -36,6 +40,10 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) return;
     this.authService.addPatient({
       email: this.registerForm.value.email,
+      name:this.registerForm.value.name,
+      address:this.registerForm.value.address,
+      birthdate:this.registerForm.value.birthdate,
+      phone:this.registerForm.value.phone,
       password: this.registerForm.value.password
     });
     this.router.navigate(['/login']);

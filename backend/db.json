@@ -17,6 +17,15 @@
       "birthdate": "22-01-2000",
       "phone": "0706050403",
       "address": "72 chemin de l'avenir"
+    },
+    {
+      "email": "weltmannjeremy@gmail.com",
+      "name": "Jérémy Weltmann",
+      "address": "6 rue des tulipes Paris 75000",
+      "birthdate": "1999-04-20",
+      "phone": "0646875408",
+      "password": "123456",
+      "id": 3
     }
   ],
   "doctors": [
@@ -56,11 +65,19 @@
     },
     {
       "id": 4,
-      "patientId": null,
+      "patientId": 1,
       "doctorId": 1,
       "date": "2023-12-04",
       "time": "01:00 PM",
-      "available": true
+      "available": false,
+      "doctor": {
+        "id": 1,
+        "name": "Dr. Smith",
+        "specialty": "Cardiologist",
+        "address": "23 Rue de Paris",
+        "conventioned": true,
+        "payment": "Credit card"
+      }
     },
     {
       "id": 5,
@@ -72,11 +89,19 @@
     },
     {
       "id": 6,
-      "patientId": null,
+      "patientId": 1,
       "doctorId": 2,
       "date": "2023-12-06",
       "time": "03:00 PM",
-      "available": true
+      "available": false,
+      "doctor": {
+        "id": 2,
+        "name": "Dr. Johnson",
+        "specialty": "Dermatologist",
+        "address": "55 Rue de Limoges",
+        "conventioned": false,
+        "payment": "Cash"
+      }
     },
     {
       "id": 7,
@@ -88,11 +113,19 @@
     },
     {
       "id": 8,
-      "patientId": null,
+      "patientId": 1,
       "doctorId": 2,
       "date": "2023-12-08",
       "time": "05:00 PM",
-      "available": true
+      "available": false,
+      "doctor": {
+        "id": 2,
+        "name": "Dr. Johnson",
+        "specialty": "Dermatologist",
+        "address": "55 Rue de Limoges",
+        "conventioned": false,
+        "payment": "Cash"
+      }
     },
     {
       "id": 9,
@@ -100,7 +133,15 @@
       "doctorId": 1,
       "date": "2023-12-09",
       "time": "06:00 PM",
-      "available": true
+      "available": true,
+      "doctor": {
+        "id": 1,
+        "name": "Dr. Smith",
+        "specialty": "Cardiologist",
+        "address": "23 Rue de Paris",
+        "conventioned": true,
+        "payment": "Credit card"
+      }
     },
     {
       "id": 10,
@@ -108,7 +149,15 @@
       "doctorId": 1,
       "date": "2023-12-10",
       "time": "07:00 PM",
-      "available": true
+      "available": true,
+      "doctor": {
+        "id": 1,
+        "name": "Dr. Smith",
+        "specialty": "Cardiologist",
+        "address": "23 Rue de Paris",
+        "conventioned": true,
+        "payment": "Credit card"
+      }
     },
     {
       "id": 11,
@@ -116,7 +165,15 @@
       "doctorId": 2,
       "date": "2023-12-11",
       "time": "08:00 PM",
-      "available": true
+      "available": true,
+      "doctor": {
+        "id": 2,
+        "name": "Dr. Johnson",
+        "specialty": "Dermatologist",
+        "address": "55 Rue de Limoges",
+        "conventioned": false,
+        "payment": "Cash"
+      }
     }
   ]
 }

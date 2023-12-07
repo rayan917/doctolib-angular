@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Patient } from '../interfaces/patient';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,7 @@ export class AuthService {
     return this.http.get('http://localhost:3000/patients?email=' + user.email + '&password=' + user.password);
   }
 
-  addPatient(user: { email: string; password: string; }) {
+  addPatient(user:Patient) {
     return this.http.post('http://localhost:3000/patients', user).subscribe();
   }
 

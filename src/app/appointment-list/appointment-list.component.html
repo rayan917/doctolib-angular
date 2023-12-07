@@ -17,7 +17,7 @@
               {{ appoint.available ? 'Disponible' : 'Non disponible' }}
             </p>
   
-            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+            <button (click)="addUserAppointment(appoint)" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
               Réservez le rendez-vous
             </button>
           </div>
