@@ -2,31 +2,6 @@
     <h1 class="text-3xl font-bold mb-6">My appointments</h1>
 
     <div *ngFor="let appointment of myAppointments" class="bg-white shadow-md rounded-md p-4 mb-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="mb-4 md:mb-0">
-          <div class="bg-blue-500 text-white p-2 rounded-md">
-            <p class="font-bold">ID Patient: {{ appointment.patientId }}</p>
-          </div>
-          <div class="mt-2">
-            <p class="font-bold">Date: {{ appointment.date }}</p>
-            <p class="font-bold">Hour: {{ appointment.time }}</p>
-            <p class="font-bold">Name: {{ myPatient.name }}</p>
-            <p class="font-bold">Birthdate: {{ myPatient.birthdate }}</p>
-          </div>
-        </div>
-  
-        <div class="mb-4 md:mb-0">
-          <div class="bg-green-500 text-white p-2 rounded-md">
-            <p class="font-bold">ID appointment: {{ appointment.id }}</p>
-          </div>
-          <div class="mt-2">
-            <p class="font-bold">Doctor: {{ appointment.doctor.name }}</p>
-            <p class="font-bold">Speciality: {{ appointment.doctor.specialty }}</p>
-            <p class="font-bold">Doctor Address : {{ appointment.doctor.address }}</p>
-            <p class="font-bold">Conventionned: {{ appointment.doctor.conventioned ? 'YES' : 'NO' }}</p>
-            <p class="font-bold">Payment: {{ appointment.doctor.payment }}</p>
-          </div>
-        </div>
-      </div>
+      <app-appointment-detail [appointment]="appointment" [patient]="myPatient" (onCancelAppointment)="handleCancelAppointment($event)"></app-appointment-detail>
+      
     </div>
-</div>

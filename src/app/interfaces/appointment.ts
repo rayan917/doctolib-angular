@@ -5,7 +5,7 @@ export interface Appointment {
     available: boolean;
     date: string;
     doctorId: number;
-    patientId: number;
+    patientId: number|null;
     time: string;
     doctor?: Doctor
 }

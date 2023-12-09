@@ -1,1 +1,37 @@
-<p>appointment-detail works!</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+       
+  <div class="mb-4 md:mb-0">
+    <div class="bg-blue-500 text-white p-2 rounded-md">
+      <p class="font-bold">ID Patient: {{ appointment?.patientId }}</p>
+    </div>
+    <div class="mt-2">
+     
+      <p class="font-bold">Date: {{ appointment?.date }}</p>
+      <p class="font-bold">Hour: {{ appointment?.time }}</p>
+      <p class="font-bold">Name: {{ patient?.name }}</p>
+      <p class="font-bold">Birthdate: {{ patient?.birthdate }}</p>
+    </div>
+  </div>
+
+  <div class="mb-4 md:mb-0">
+    <div class="bg-green-500 text-white p-2 rounded-md">
+      <p class="font-bold">ID appointment: {{ appointment?.id }}</p>
+    </div>
+    <div class="mt-2">
+     <p class="font-bold"> Doctor: {{ appointment?.doctor?.name }}</p>
+     <button (click)="navigateDoctor(appointment?.doctor)"class="bg-blue-500 text-white px-4 py-2 rounded-full flex items-center">
+      <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 19c-4.4183 0-8-3.5817-8-8s3.5817-8 8-8 8 3.5817 8 8-3.5817 8-8 8zm-1.6667-5.3333c-.2211 0-.4167.1389-.5.3333a.4982.4982 0 0 0 .1111.5556l4.1667 4.1667a.4994.4994 0 0 0 .8333-.2778l1.1667-6a.5002.5002 0 0 0-.6666-.5555l-5.8334 1.6666zm1.6667-7.3333c-1.1046 0-2 .8954-2 2s.8954 2 2 2 2-.8954 2-2-.8954-2-2-2z"></path>
+      </svg>
+      Info
+    </button>
+      <p class="font-bold">Speciality: {{ appointment?.doctor?.specialty }}</p>
+      <p class="font-bold">Doctor Address : {{ appointment?.doctor?.address }}</p>
+      <p class="font-bold">Conventionned: {{ appointment?.doctor?.conventioned ? 'YES' : 'NO' }}</p>
+      <p class="font-bold">Payment: {{ appointment?.doctor?.payment }}</p>
+    </div>
+    <button (click)="cancelAppointment()">Annuler</button>
+  </div>
+</div>

@@ -35,7 +35,7 @@ export class AppointmentsService {
     );
   }
 
-  private getDoctorInfo(doctorId: number): Observable<Doctor> {
+   getDoctorInfo(doctorId: number): Observable<Doctor> {
     return this.http.get<Doctor>(`http://localhost:3000/doctors/${doctorId}`);
   }
 
@@ -64,6 +64,16 @@ export class AppointmentsService {
       patientId:patientId
     };
     
+    return this.http.put(`${this.appointmentsUrl}/${updatedAppointment.id}`, updatedAppointment);
+  }
+
+  userRemoveAppointments(appointment:Appointment){
+    const updatedAppointment: Appointment = {
+      ...appointment,
+      available: true,
+      patientId:null
+    };
+
     return this.http.put(`${this.appointmentsUrl}/${updatedAppointment.id}`, updatedAppointment);
   }
 

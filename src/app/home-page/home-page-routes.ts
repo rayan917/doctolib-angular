@@ -4,6 +4,7 @@ import { MyAppointmentsComponent } from "../my-appointments/my-appointments.comp
 import AppointmentListComponent from "../appointment-list/appointment-list.component";
 import AppointmentDetailComponent from "../appointment-detail/appointment-detail.component";
 import ProfileComponent from "../profile/profile.component";
+import { DoctorDetailComponent } from "../doctor-detail/doctor-detail.component";
 
 
 export const routes: Routes = [
@@ -33,5 +34,9 @@ export const routes: Routes = [
         path: 'profile',
         component: ProfileComponent,
         canActivate: [AuthGuard],
+    },
+    {
+        path: 'doctors/:id', component: DoctorDetailComponent,
+        canActivate:[AuthGuard] 
     }
 ]
