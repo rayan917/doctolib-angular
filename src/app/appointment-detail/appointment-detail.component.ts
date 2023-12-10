@@ -3,13 +3,16 @@ import { Appointment } from '../interfaces/appointment';
 import { Patient } from '../interfaces/patient';
 import { Doctor } from '../interfaces/doctor';
 import { Router } from '@angular/router';
+import { DirectiveModule } from '../directive.module';
+import { PipesModule } from '../pipe.module';
 
 
 @Component({
   selector: 'app-appointment-detail',
   templateUrl: './appointment-detail.component.html',
   styleUrls: ['./appointment-detail.component.scss'],
-  standalone: true
+  standalone: true,
+  imports:[DirectiveModule,PipesModule],
 })
 export default class AppointmentDetailComponent {
   constructor(private router: Router) { }

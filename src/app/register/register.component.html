@@ -33,11 +33,18 @@
           <div class="mt-2">
             <input style="padding:8px" id="email" name="email" type="email" formControlName="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-400 sm:text-sm sm:leading-6">
           </div>
+          <div *ngIf="registerForm.get('email')?.hasError('invalidEmail')">
+            <p class="text-red-500 text-sm mt-1">Il ne s'agit pas d'une email valide ! </p>
+          </div>
+          
         </div>
         <div>
           <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
           <div class="mt-2">
             <input style="padding:8px" id="name" name="name" type="text" formControlName="name" autocomplete="name" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-400 sm:text-sm sm:leading-6">
+          </div>
+          <div *ngIf="registerForm.get('name')?.hasError('specialChars')">
+            <p class="text-red-500 text-sm mt-1">Le nom ne doit pas contenir de caractères spéciaux.</p>
           </div>
         </div>
         <div>
@@ -56,6 +63,9 @@
           <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
           <div class="mt-2">
             <input style="padding:8px" id="address" name="address" type="text" formControlName="address" autocomplete="address" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-400 sm:text-sm sm:leading-6">
+          </div>
+          <div *ngIf="registerForm.get('address')?.hasError('specialChars')">
+            <p class="text-red-500 text-sm mt-1">L'adresse ne doit pas contenir de caractères spéciaux.</p>
           </div>
         </div>
         <div>

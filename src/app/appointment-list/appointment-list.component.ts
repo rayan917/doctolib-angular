@@ -3,13 +3,14 @@ import { AppointmentsService } from '../services/appointments.service';
 import { Appointment } from '../interfaces/appointment';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../services/auth.service';
+import { PipesModule } from '../pipe.module';
 
 @Component({
-  selector: 'app-appointment-list',
-  templateUrl: './appointment-list.component.html',
-  styleUrls: ['./appointment-list.component.scss'],
-  imports:[CommonModule],
-  standalone: true
+    selector: 'app-appointment-list',
+    templateUrl: './appointment-list.component.html',
+    styleUrls: ['./appointment-list.component.scss'],
+    standalone: true,
+    imports: [CommonModule,PipesModule]
 })
 export default class AppointmentListComponent implements OnInit {
   public appointments?:Appointment[];

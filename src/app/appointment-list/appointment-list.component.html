@@ -7,14 +7,14 @@
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">{{ appoint.doctor?.name }}</h3>
   
-            <p class="text-gray-600 mb-2">Jour du rendez-vous : {{appoint.date }}</p>
+            <p class="text-gray-600 mb-2">Jour du rendez-vous : {{ appoint.date  | customDateFormat:'dd/MM/YY'}}</p>
   
             <p class="text-gray-600 mb-2">Heure du rendez-vous : {{ appoint.time }}</p>
   
             <p class="text-blue-500 font-semibold mb-2">{{ appoint.doctor?.specialty }}</p>
   
             <p class="text-green-500 font-semibold mb-4">
-              {{ appoint.available ? 'Disponible' : 'Non disponible' }}
+              {{ appoint.available | availableStatus}}
             </p>
   
             <button (click)="addUserAppointment(appoint)" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">

@@ -1,15 +1,15 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
        
-  <div class="mb-4 md:mb-0">
+  <div class="mb-4 md:mb-0" >
     <div class="bg-blue-500 text-white p-2 rounded-md">
       <p class="font-bold">ID Patient: {{ appointment?.patientId }}</p>
     </div>
     <div class="mt-2">
      
-      <p class="font-bold">Date: {{ appointment?.date }}</p>
+      <p class="font-bold" [appHighlightAppointment]="appointment?.date">Date: {{ appointment?.date|customDateFormat:'dd/MM/YY' }}</p>
       <p class="font-bold">Hour: {{ appointment?.time }}</p>
       <p class="font-bold">Name: {{ patient?.name }}</p>
-      <p class="font-bold">Birthdate: {{ patient?.birthdate }}</p>
+      <p class="font-bold">Birthdate: {{ patient?.birthdate|customDateFormat:'dd/MM/YYYY' }}</p>
     </div>
   </div>
 

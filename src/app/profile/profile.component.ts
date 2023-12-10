@@ -1,9 +1,9 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Patient } from '../interfaces/patient';
+import {  FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProfileService } from '../services/profile.service';
 import { CommonModule } from '@angular/common';
+import { emailValidator, noSpecialCharsValidator } from '../validator';
 
 @Component({
   selector: 'app-profile',
@@ -36,11 +36,11 @@ export default class ProfileComponent implements OnInit {
     this.userForm = this._formBuilder.group({
       id: [this.myProfil.id, Validators.required],
       name: [this.myProfil.name, Validators.required],
-      email: [this.myProfil.email, Validators.required],
+      email: [this.myProfil.email, [Validators.required,emailValidator()]],
       password: [this.myProfil.password, Validators.required],
       birthdate: [this.myProfil.birthdate, Validators.required],
       phone: [this.myProfil.phone, Validators.required],
-      address: [this.myProfil.address, Validators.required],
+      address: [this.myProfil.address, [Validators.required,noSpecialCharsValidator()]],
     });
   }
 

@@ -9,7 +9,7 @@ import { Appointment } from '../interfaces/appointment';
   selector: 'app-my-appointments',
   templateUrl: './my-appointments.component.html',
   styleUrls: ['./my-appointments.component.scss'],
-  imports:[CommonModule,AppointmentDetailComponent,CommonModule],
+  imports:[CommonModule,AppointmentDetailComponent],
   standalone: true
 })
 export class MyAppointmentsComponent {
