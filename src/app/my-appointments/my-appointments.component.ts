@@ -30,6 +30,7 @@ export class MyAppointmentsComponent {
     this.appointmentService.userRemoveAppointments(appointment).subscribe(
       updatedAppointment => {
         console.log('Rendez-vous mis à jour avec succès :', updatedAppointment);
+        alert("You successfully cancelled this appointment")
         if(this.myAppointments.length===1){
           this.myAppointments=[]
         }

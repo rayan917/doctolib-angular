@@ -4,6 +4,9 @@ import { Directive, ElementRef, Input, Renderer2 } from "@angular/core";
   selector: '[appHighlightAppointment]'
 })
 export class HighlightAppointmentDirective {
+
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
   @Input() set appHighlightAppointment(dateString: string | undefined) {
     if (dateString) {
       const currentDate = new Date();
@@ -11,24 +14,23 @@ export class HighlightAppointmentDirective {
 
       // Vérifiez si la date est valide
       if (!isNaN(appointmentDate.getTime())) {
-        // Vérifiez si les dates sont dans la même semaine
-        if (this.isSameWeek(currentDate, appointmentDate)) {
+
+        // Difference en jours entre la date du rendez-vous et la date du jour
+        const timeDifference = appointmentDate.getTime() - currentDate.getTime();
+        const daysDifference = timeDifference / (1000 * 60 * 60 * 24);
+
+        // Vérifiez si le rendez-vous est dans les 7 prochains jours
+        if (daysDifference >0 && daysDifference <= 7) {
           this.renderer.setStyle(this.el.nativeElement, 'background-color', 'yellow');
-        } else {
+        } 
+        else if(daysDifference >-1 && daysDifference < 1) {
+          this.renderer.setStyle(this.el.nativeElement, 'background-color', 'orange');
+        }
+        else {
           this.renderer.removeStyle(this.el.nativeElement, 'background-color');
         }
       }
     }
   }
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
-
-  // Fonction pour vérifier si deux dates sont dans la même semaine
-  private isSameWeek(date1: Date, date2: Date): boolean {
-    const oneDay = 24 * 60 * 60 * 1000; // heures * minutes * secondes * millisecondes
-    const diffDays = Math.abs(Math.round((date1.getTime() - date2.getTime()) / oneDay));
-
-    console.log(diffDays < 7 && date1.getDay() === date2.getDay())
-    return diffDays < 7 && date1.getDay() === date2.getDay();
-  }
 }

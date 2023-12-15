@@ -5,4 +5,5 @@ export interface Doctor {
     address: string;
     conventioned: boolean;
     payment: string;
+    photo: string;
 }

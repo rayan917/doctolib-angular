@@ -33,6 +33,7 @@ export default class AppointmentListComponent implements OnInit {
         console.log('Rendez-vous mis à jour avec succès :', updatedAppointment);
         this.appointmentsService.getAvailableAppointmentsWithDoctorInfo().subscribe((appointments: Appointment[]) =>{
           this.appointments = appointments;
+          alert("You successfully booked this appointment")
         });
       },
       error => {

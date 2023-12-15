@@ -26,7 +26,7 @@ export class LoginComponent {
 
   login() {
     this.authService.loginPatient(this.loginForm.value).subscribe((user: any) => {
-      if (user.length === 0) alert('Erreur dans le pseudo ou le mot de passe');
+      if (user.length === 0) alert('You entered an incorrect username or password');
       this.authService.user = user[0];
       if (!this.authService.user) return;
       this.authService.savePatient();

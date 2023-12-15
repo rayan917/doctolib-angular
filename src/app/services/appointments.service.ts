@@ -30,7 +30,8 @@ export class AppointmentsService {
         return forkJoin(observables);
       }),
       map((appointmentsWithDoctor: Appointment[]) =>
-        appointmentsWithDoctor.filter(appointment => appointment.available === true)
+        appointmentsWithDoctor.filter(appointment => appointment.available === true && new Date(appointment.date) > new Date())
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
       )
     );
   }
@@ -44,6 +45,7 @@ export class AppointmentsService {
 
     return this.http.get<Appointment[]>(patientAppointmentsUrl).pipe(
       switchMap((appointments: Appointment[]) => {
+        appointments.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
         const observables = appointments.map(appointment =>
           this.getDoctorInfo(appointment.doctorId).pipe(
             map(doctor => ({

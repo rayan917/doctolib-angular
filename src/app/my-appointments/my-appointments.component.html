@@ -1,7 +1,42 @@
-<div class="container mx-auto ">
-    <h1 class="text-3xl font-bold mb-6">My appointments</h1>
-
-    <div *ngFor="let appointment of myAppointments" class="bg-white shadow-md rounded-md p-4 mb-4">
-      <app-appointment-detail [appointment]="appointment" [patient]="myPatient" (onCancelAppointment)="handleCancelAppointment($event)"></app-appointment-detail>
-      
+<section class="text-gray-600 body-font">
+  <div class="container px-5 pt-10 pb-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">My appointments</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Please find below the appointments you booked</p>
     </div>
+
+    <div class="w-full">
+      <div class="bg-white shadow-md rounded my-6">
+        <table class="min-w-max w-full table-auto">
+          <thead>
+            <tr class="bg-gray-200 text-gray-600 text-sm leading-normal">
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-slate-50 text-sm bg-teal-400 rounded-tl rounded-bl">Identifier</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-slate-50 text-sm bg-teal-400">Date</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-slate-50 text-sm bg-teal-400">Time</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-slate-50 text-sm bg-teal-400">Doctor</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-slate-50 text-sm bg-teal-400">Speciality</th>
+              <th class="px-4 py-3 title-font tracking-wider font-medium text-slate-50 text-sm bg-teal-400 rounded-tr rounded-br">More</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-600 text-sm font-light">
+            <tr *ngFor="let appointment of myAppointments">
+              <app-appointment-detail [appointment]="appointment" [patient]="myPatient" (onCancelAppointment)="handleCancelAppointment($event)"></app-appointment-detail>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <div style="display: flex;justify-content:center;gap:50px;margin-top:30px">
+      <div style="display:flex;align-items:center">
+        <span style="display:block;background-color:orange;height:20px;width:20px;margin-right:15px"></span>
+        <span>Appointment today</span>
+      </div>
+      <div style="display:flex;align-items:center">
+        <span style="display:block;background-color:yellow;height:20px;width:20px;margin-right:15px"></span>
+        <span>Appointment of the week</span>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
