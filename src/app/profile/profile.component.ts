@@ -3,7 +3,7 @@ import { AuthService } from '../services/auth.service';
 import {  FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProfileService } from '../services/profile.service';
 import { CommonModule } from '@angular/common';
-import { emailValidator, noSpecialCharsValidator } from '../validator';
+import { emailValidator, noSpecialCharsValidator } from '../validators/validator';
 
 @Component({
   selector: 'app-profile',

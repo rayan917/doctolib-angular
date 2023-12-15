@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HighlightAppointmentDirective } from './highlight-appointment.directive';
+import { HighlightAppointmentDirective } from './directives/highlight-appointment.directive';
 
 @NgModule({
   declarations: [

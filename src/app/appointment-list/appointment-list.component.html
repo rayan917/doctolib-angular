@@ -13,9 +13,6 @@
   
             <p class="text-blue-500 font-semibold mb-2">{{ appoint.doctor?.specialty }}</p>
   
-            <p class="text-green-500 font-semibold mb-4">
-              {{ appoint.available | availableStatus}}
-            </p>
   
             <button (click)="addUserAppointment(appoint)" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
               Réservez le rendez-vous

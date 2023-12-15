@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CustomDateFormatPipe } from './custom-date-format.pipe';
+import { CustomDateFormatPipe } from './pipes/custom-date-format.pipe';
 import { DatePipe } from '@angular/common';
-import { AvailableStatusPipe } from './available-status.pipe';
+import { ConventionnedStatusPipe } from './pipes/conventionned-status.pipe';
 
 @NgModule({
   declarations: [
     CustomDateFormatPipe,
-    AvailableStatusPipe
+    ConventionnedStatusPipe
     
   ],
   exports: [
     CustomDateFormatPipe,
-    AvailableStatusPipe
+    ConventionnedStatusPipe
    
   ],
   providers: [DatePipe],

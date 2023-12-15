@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 import { AuthService } from '../services/auth.service';
-import { emailValidator, noSpecialCharsValidator } from '../validator';
+import { emailValidator, noSpecialCharsValidator } from '../validators/validator';
 
 @Component({
   selector: 'app-register',

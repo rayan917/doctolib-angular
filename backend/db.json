@@ -7,7 +7,7 @@
       "password": "john",
       "birthdate": "12-06-2000",
       "phone": "0601020307",
-      "address": "45 Allée des oisea"
+      "address": "45 Allée des oiseaux"
     },
     {
       "id": 2,
@@ -57,11 +57,19 @@
     },
     {
       "id": 3,
-      "patientId": 1,
+      "patientId": null,
       "doctorId": 1,
       "date": "2023-12-03",
       "time": "12:00 PM",
-      "available": false
+      "available": true,
+      "doctor": {
+        "id": 1,
+        "name": "Dr. Smith",
+        "specialty": "Cardiologist",
+        "address": "23 Rue de Paris",
+        "conventioned": true,
+        "payment": "Credit card"
+      }
     },
     {
       "id": 4,
@@ -81,19 +89,27 @@
     },
     {
       "id": 5,
-      "patientId": 1,
+      "patientId": null,
       "doctorId": 2,
       "date": "2023-12-05",
       "time": "02:00 PM",
-      "available": false
+      "available": true,
+      "doctor": {
+        "id": 2,
+        "name": "Dr. Johnson",
+        "specialty": "Dermatologist",
+        "address": "55 Rue de Limoges",
+        "conventioned": false,
+        "payment": "Cash"
+      }
     },
     {
       "id": 6,
-      "patientId": 1,
+      "patientId": null,
       "doctorId": 2,
       "date": "2023-12-06",
       "time": "03:00 PM",
-      "available": false,
+      "available": true,
       "doctor": {
         "id": 2,
         "name": "Dr. Johnson",
@@ -113,11 +129,11 @@
     },
     {
       "id": 8,
-      "patientId": 1,
+      "patientId": null,
       "doctorId": 2,
       "date": "2023-12-08",
       "time": "05:00 PM",
-      "available": false,
+      "available": true,
       "doctor": {
         "id": 2,
         "name": "Dr. Johnson",
@@ -161,11 +177,11 @@
     },
     {
       "id": 11,
-      "patientId": null,
+      "patientId": 1,
       "doctorId": 2,
       "date": "2023-12-11",
       "time": "08:00 PM",
-      "available": true,
+      "available": false,
       "doctor": {
         "id": 2,
         "name": "Dr. Johnson",
