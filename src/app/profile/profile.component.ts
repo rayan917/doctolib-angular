@@ -4,6 +4,7 @@ import {  FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators }
 import { ProfileService } from '../services/profile.service';
 import { CommonModule } from '@angular/common';
 import { emailValidator, noSpecialCharsValidator } from '../validators/validator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -21,7 +22,8 @@ export default class ProfileComponent implements OnInit {
     private authService: AuthService,
     private _formBuilder: FormBuilder,
     private profileService: ProfileService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private router: Router
     ) {}
 
   ngOnInit() {
@@ -48,10 +50,15 @@ export default class ProfileComponent implements OnInit {
     this.profileService.updateProfile(this.myProfil.id, this.userForm?.value).subscribe({
       next: (response) => {
         console.log('Profil mis à jour avec succès:', response);
+        alert("Your profile has been successfully updated")
         this.userForm?.patchValue(response);
         this.cdr.detectChanges();
       },
       error: (err) => {console.log('Erreur',err)}
     });
+  }
+
+  cancelProfile() {
+    this.router.navigate(['/home']);
   }
 }

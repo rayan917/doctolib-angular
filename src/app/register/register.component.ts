@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 import { AuthService } from '../services/auth.service';
-import { emailValidator, noSpecialCharsValidator } from '../validators/validator';
+import { chiffresSeulsValidator, emailValidator, noSpecialCharsValidator, passwordMatchValidator } from '../validators/validator';
 
 @Component({
   selector: 'app-register',
@@ -24,17 +24,11 @@ export class RegisterComponent implements OnInit {
       email: new FormControl('', [Validators.required,emailValidator()]),
       name: new FormControl('', [Validators.required,noSpecialCharsValidator()]),
       birthdate:new FormControl('',Validators.required),
-      phone:new FormControl('',Validators.required),
+      phone:new FormControl('', [Validators.required, chiffresSeulsValidator()]),
       address:new FormControl('',[Validators.required,noSpecialCharsValidator()]),
       password: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      confirmPassword: new FormControl('', Validators.required),
-    }, { validators: this.checkPasswords });
-  }
-
-  private checkPasswords(control: FormGroup) {
-    const password = control.get('password');
-    const confirmPassword = control.get('confirmPassword');
-    return password?.value !== confirmPassword?.value ? { missMatch: true } : null;
+      confirmPassword: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    }, { validator: passwordMatchValidator() });
   }
 
   addUser() {

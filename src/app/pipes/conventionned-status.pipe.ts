@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ConventionnedStatusPipe implements PipeTransform {
 
-  transform(conventionned: boolean): string {
+  transform(conventionned?: boolean): string {
     return conventionned ? 'Yes' : 'No';
   }
 

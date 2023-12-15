@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { AppointmentsService } from '../services/appointments.service';
 import { ActivatedRoute } from '@angular/router';
 import { Doctor } from '../interfaces/doctor';
+import { PipesModule } from '../pipe.module';
 
 @Component({
   selector: 'app-doctor-detail',
   templateUrl: './doctor-detail.component.html',
   styleUrls: ['./doctor-detail.component.scss'],
+  imports: [PipesModule],
   standalone:true
 })
 export class DoctorDetailComponent implements OnInit {

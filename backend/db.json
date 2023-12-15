@@ -2,30 +2,30 @@
   "patients": [
     {
       "id": 1,
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "password": "john",
-      "birthdate": "12-06-2000",
+      "name": "Mathis Talbi",
+      "email": "mathis.talbi@efrei.net",
+      "password": "mathis",
+      "birthdate": "2000-02-03",
       "phone": "0601020307",
-      "address": "45 Allée des oiseaux"
+      "address": "125 Rue de Paris 72012 Paris"
     },
     {
       "id": 2,
-      "name": "Jane Doe",
-      "email": "jane.doe@example.com",
-      "password": "jane",
+      "name": "Rayane Mamache",
+      "email": "rayane.mamache@efrei.net",
+      "password": "rayane",
       "birthdate": "22-01-2000",
       "phone": "0706050403",
-      "address": "72 chemin de l'avenir"
+      "address": "72 Chemin de la rivière 78120 Rambouillet"
     },
     {
-      "email": "weltmannjeremy@gmail.com",
+      "id": 3,
       "name": "Jérémy Weltmann",
-      "address": "6 rue des tulipes Paris 75000",
+      "email": "weltmannjeremy@gmail.com",
+      "password": "123456",
       "birthdate": "1999-04-20",
       "phone": "0646875408",
-      "password": "123456",
-      "id": 3
+      "address": "6 Rue des Tulipes 75014 Paris"
     }
   ],
   "doctors": [
@@ -33,162 +33,122 @@
       "id": 1,
       "name": "Dr. Smith",
       "specialty": "Cardiologist",
-      "address": "23 Rue de Paris",
+      "address": "567 Park Avenue New York 10022",
       "conventioned": true,
-      "payment": "Credit card"
+      "payment": "Cash / Credit Card",
+      "photo": "/assets/pictures/doctor1.jpg"
     },
     {
       "id": 2,
       "name": "Dr. Johnson",
       "specialty": "Dermatologist",
-      "address": "55 Rue de Limoges",
-      "conventioned": false,
-      "payment": "Cash"
+      "address": "789 Pine Street Washington DC 20001",
+      "conventioned": true,
+      "payment": "Cash",
+      "photo": "/assets/pictures/doctor2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Davis",
+      "specialty": "General",
+      "address": "254 Broadway Street New York 10003",
+      "conventioned": true,
+      "payment": "Check / Credit card",
+      "photo": "/assets/pictures/doctor3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Morgan",
+      "specialty": "Dentist",
+      "address": "432 West 54th Street New York 10019",
+      "conventioned": true,
+      "payment": "Cash",
+      "photo": "/assets/pictures/doctor4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Anderson",
+      "specialty": "General",
+      "address": "106 Lexington Avenue New York 10016",
+      "conventioned": true,
+      "payment": "Cash / Credit card",
+      "photo": "/assets/pictures/doctor5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Taylor",
+      "specialty": "Surgeon",
+      "address": "253 Riverside Drive New York 10025",
+      "conventioned": true,
+      "payment": "Credit card",
+      "photo": "/assets/pictures/doctor6.jpg"
     }
   ],
   "appointments": [
     {
+      "id": 1,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2023-12-18",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
       "id": 2,
-      "patientId": 2,
+      "patientId": null,
       "doctorId": 2,
-      "date": "2023-12-02",
-      "time": "11:00 AM",
-      "available": false
+      "date": "2023-12-20",
+      "time": "02:30 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
     },
     {
       "id": 3,
       "patientId": null,
-      "doctorId": 1,
-      "date": "2023-12-03",
-      "time": "12:00 PM",
+      "doctorId": 3,
+      "date": "2023-12-21",
+      "time": "01:15 PM",
       "available": true,
       "doctor": {
-        "id": 1,
-        "name": "Dr. Smith",
-        "specialty": "Cardiologist",
-        "address": "23 Rue de Paris",
-        "conventioned": true,
-        "payment": "Credit card"
+        "id": 3
       }
     },
     {
       "id": 4,
-      "patientId": 1,
-      "doctorId": 1,
-      "date": "2023-12-04",
-      "time": "01:00 PM",
-      "available": false,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2023-12-22",
+      "time": "09:45 AM",
+      "available": true,
       "doctor": {
-        "id": 1,
-        "name": "Dr. Smith",
-        "specialty": "Cardiologist",
-        "address": "23 Rue de Paris",
-        "conventioned": true,
-        "payment": "Credit card"
+        "id": 4
       }
     },
     {
       "id": 5,
       "patientId": null,
-      "doctorId": 2,
-      "date": "2023-12-05",
-      "time": "02:00 PM",
+      "doctorId": 5,
+      "date": "2023-12-24",
+      "time": "03:30 PM",
       "available": true,
       "doctor": {
-        "id": 2,
-        "name": "Dr. Johnson",
-        "specialty": "Dermatologist",
-        "address": "55 Rue de Limoges",
-        "conventioned": false,
-        "payment": "Cash"
+        "id": 5
       }
     },
     {
       "id": 6,
       "patientId": null,
-      "doctorId": 2,
-      "date": "2023-12-06",
-      "time": "03:00 PM",
+      "doctorId": 6,
+      "date": "2023-12-25",
+      "time": "11:00 AM",
       "available": true,
       "doctor": {
-        "id": 2,
-        "name": "Dr. Johnson",
-        "specialty": "Dermatologist",
-        "address": "55 Rue de Limoges",
-        "conventioned": false,
-        "payment": "Cash"
-      }
-    },
-    {
-      "id": 7,
-      "patientId": 7,
-      "doctorId": 1,
-      "date": "2023-12-07",
-      "time": "04:00 PM",
-      "available": false
-    },
-    {
-      "id": 8,
-      "patientId": null,
-      "doctorId": 2,
-      "date": "2023-12-08",
-      "time": "05:00 PM",
-      "available": true,
-      "doctor": {
-        "id": 2,
-        "name": "Dr. Johnson",
-        "specialty": "Dermatologist",
-        "address": "55 Rue de Limoges",
-        "conventioned": false,
-        "payment": "Cash"
-      }
-    },
-    {
-      "id": 9,
-      "patientId": null,
-      "doctorId": 1,
-      "date": "2023-12-09",
-      "time": "06:00 PM",
-      "available": true,
-      "doctor": {
-        "id": 1,
-        "name": "Dr. Smith",
-        "specialty": "Cardiologist",
-        "address": "23 Rue de Paris",
-        "conventioned": true,
-        "payment": "Credit card"
-      }
-    },
-    {
-      "id": 10,
-      "patientId": null,
-      "doctorId": 1,
-      "date": "2023-12-10",
-      "time": "07:00 PM",
-      "available": true,
-      "doctor": {
-        "id": 1,
-        "name": "Dr. Smith",
-        "specialty": "Cardiologist",
-        "address": "23 Rue de Paris",
-        "conventioned": true,
-        "payment": "Credit card"
-      }
-    },
-    {
-      "id": 11,
-      "patientId": 1,
-      "doctorId": 2,
-      "date": "2023-12-11",
-      "time": "08:00 PM",
-      "available": false,
-      "doctor": {
-        "id": 2,
-        "name": "Dr. Johnson",
-        "specialty": "Dermatologist",
-        "address": "55 Rue de Limoges",
-        "conventioned": false,
-        "payment": "Cash"
+        "id": 6
       }
     }
   ]

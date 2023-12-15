@@ -22,3 +22,24 @@ export function emailValidator(): ValidatorFn {
     return isValid ? null : { invalidEmail: true };
   };
 }
+
+export function passwordMatchValidator(): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: boolean } | null => {
+    const password = control.get('password');
+    const confirmPassword = control.get('confirmPassword');
+
+    if (password && confirmPassword && password.value !== confirmPassword.value) {
+      return { 'passwordMismatch': true };
+    }
+
+    return null;
+  };
+}
+
+export function chiffresSeulsValidator(): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const estChiffresSeuls = /^\d+$/.test(control.value);
+    return estChiffresSeuls ? null : { 'chiffresSeuls': true };
+  };
+}
+

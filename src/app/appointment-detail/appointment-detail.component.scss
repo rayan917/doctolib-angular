@@ -1,0 +1,42 @@
+.details-button{
+    width: 50px;
+    height: 35px;
+    position: relative;
+}
+
+.appoitment-item{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+}
+.appoitment-item > div{
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.appointment-photo, .appointment-speciality{
+    width: 20% !important;
+    min-width:200px !important;
+}
+
+
+.appointment-buttons{
+    display:flex;
+    flex-direction:row;
+    gap:15px;
+    width:15% !important;
+}
+
+.table-cell {
+    display: table-cell;
+    border: 1px solid #000; /* Ajoutez des styles de bordure pour la démonstration */
+    padding: 8px; /* Ajoutez un remplissage pour la démonstration */
+  }
+
+  td {
+    vertical-align: middle;
+  }
+  td:last-child {
+  width: 0;
+  }
