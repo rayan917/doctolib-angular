@@ -1,1 +1,7 @@
-<p>my-appointments works!</p>
+<div class="container mx-auto ">
+    <h1 class="text-3xl font-bold mb-6">My appointments</h1>
+
+    <div *ngFor="let appointment of myAppointments" class="bg-white shadow-md rounded-md p-4 mb-4">
+      <app-appointment-detail [appointment]="appointment" [patient]="myPatient" (onCancelAppointment)="handleCancelAppointment($event)"></app-appointment-detail>
+      
+    </div>

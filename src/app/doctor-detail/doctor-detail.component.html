@@ -1,0 +1,25 @@
+
+<div class="container mx-auto">
+  <h1 class="text-3xl font-bold mb-6">Doctor Info</h1>
+
+  <div class="flex flex-wrap -mx-4">
+    
+      <div class="max-w-md mx-auto bg-white rounded-md overflow-hidden shadow-md">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">Doctor: {{ doctor?.name }}</h3>
+
+          <p class="text-gray-600 mb-2">Speciality :  {{ doctor?.specialty }}</p>
+
+          <p class="text-gray-600 mb-2">Doctor Address :  {{ doctor?.address }}</p>
+
+          <p class="text-blue-500 font-semibold mb-2">Conventionned:{{ doctor?.conventioned ? 'YES' : 'NO' }}</p>
+
+          <p class="text-green-500 font-semibold mb-4">Payment
+            {{ doctor?.payment }}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
