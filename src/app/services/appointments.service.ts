@@ -42,10 +42,28 @@ export class AppointmentsService {
 
   getMyAppointments(patientId: number): Observable<any[]> {
     const patientAppointmentsUrl = `${this.appointmentsUrl}?patientId=${patientId}`;
-
+  
     return this.http.get<Appointment[]>(patientAppointmentsUrl).pipe(
       switchMap((appointments: Appointment[]) => {
-        appointments.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        const currentDate = new Date();
+  
+        // Sort appointments based on date
+        appointments.sort((a, b) => {
+          const dateA = new Date(a.date).getTime();
+          const dateB = new Date(b.date).getTime();
+  
+          if (dateA < currentDate.getTime() && dateB < currentDate.getTime()) {
+            // Both dates are in the past, sort in descending order
+            return dateB - dateA;
+          } else if (dateA < currentDate.getTime()) {
+            return 1; // dateA is in the past, move it to the end
+          } else if (dateB < currentDate.getTime()) {
+            return -1; // dateB is in the past, move it to the end
+          } else {
+            return dateA - dateB; // Dates are in the future, sort in ascending order
+          }
+        });
+  
         const observables = appointments.map(appointment =>
           this.getDoctorInfo(appointment.doctorId).pipe(
             map(doctor => ({
@@ -54,6 +72,7 @@ export class AppointmentsService {
             }))
           )
         );
+  
         return forkJoin(observables);
       })
     );

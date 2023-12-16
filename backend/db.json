@@ -22,7 +22,7 @@
       "id": 3,
       "name": "Jérémy Weltmann",
       "email": "weltmannjeremy@gmail.com",
-      "password": "123456",
+      "password": "jeremy",
       "birthdate": "1999-04-20",
       "phone": "0646875408",
       "address": "6 Rue des Tulipes 75014 Paris"
@@ -87,76 +87,82 @@
   "appointments": [
     {
       "id": 1,
-      "patientId": null,
+      "patientId": 2,
       "doctorId": 1,
       "date": "2023-12-18",
-      "time": "10:00 AM",
+      "time": "04:00 PM",
+      "available": false,
+      "doctor": {
+        "id": 1,
+        "name": "Dr. Smith",
+        "specialty": "Cardiologist",
+        "address": "567 Park Avenue New York 10022",
+        "conventioned": true,
+        "payment": "Cash / Credit Card",
+        "photo": "/assets/pictures/doctor1.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2023-12-22",
+      "time": "08:00 AM",
       "available": true,
       "doctor": {
         "id": 1
       }
     },
     {
-      "id": 2,
-      "patientId": null,
-      "doctorId": 2,
-      "date": "2023-12-20",
-      "time": "02:30 PM",
-      "available": true,
-      "doctor": {
-        "id": 2
-      }
-    },
-    {
       "id": 3,
       "patientId": null,
-      "doctorId": 3,
-      "date": "2023-12-21",
-      "time": "01:15 PM",
+      "doctorId": 1,
+      "date": "2023-12-26",
+      "time": "02:00 PM",
       "available": true,
       "doctor": {
-        "id": 3
+        "id": 1
       }
     },
     {
       "id": 4,
       "patientId": null,
-      "doctorId": 4,
-      "date": "2023-12-22",
-      "time": "09:45 AM",
+      "doctorId": 1,
+      "date": "2023-12-30",
+      "time": "05:00 PM",
       "available": true,
       "doctor": {
-        "id": 4
+        "id": 1
       }
     },
     {
       "id": 5,
       "patientId": null,
-      "doctorId": 5,
-      "date": "2023-12-24",
-      "time": "03:30 PM",
+      "doctorId": 1,
+      "date": "2024-01-03",
+      "time": "06:00 PM",
       "available": true,
       "doctor": {
-        "id": 5
+        "id": 1
       }
     },
     {
       "id": 6,
       "patientId": null,
-      "doctorId": 6,
-      "date": "2023-12-25",
-      "time": "11:00 AM",
+      "doctorId": 1,
+      "date": "2024-01-07",
+      "time": "09:00 AM",
       "available": true,
       "doctor": {
-        "id": 6
+        "id": 1
       }
     },
     {
       "id": 7,
       "patientId": null,
       "doctorId": 1,
-      "date": "2024-01-05",
-      "time": "10:00 AM",
+      "date": "2024-01-11",
+      "time": "06:00 PM",
       "available": true,
       "doctor": {
         "id": 1
@@ -165,64 +171,64 @@
     {
       "id": 8,
       "patientId": null,
-      "doctorId": 2,
-      "date": "2024-01-06",
-      "time": "02:30 PM",
+      "doctorId": 1,
+      "date": "2024-01-15",
+      "time": "06:00 PM",
       "available": true,
       "doctor": {
-        "id": 2
+        "id": 1
       }
     },
     {
       "id": 9,
       "patientId": null,
-      "doctorId": 3,
-      "date": "2024-01-10",
-      "time": "01:15 PM",
+      "doctorId": 1,
+      "date": "2024-01-19",
+      "time": "01:00 PM",
       "available": true,
       "doctor": {
-        "id": 3
+        "id": 1
       }
     },
     {
       "id": 10,
       "patientId": null,
-      "doctorId": 4,
-      "date": "2024-01-13",
-      "time": "09:45 AM",
+      "doctorId": 1,
+      "date": "2024-01-23",
+      "time": "04:00 PM",
       "available": true,
       "doctor": {
-        "id": 4
+        "id": 1
       }
     },
     {
       "id": 11,
       "patientId": null,
-      "doctorId": 5,
-      "date": "2024-01-20",
-      "time": "03:30 PM",
+      "doctorId": 1,
+      "date": "2024-01-27",
+      "time": "02:00 PM",
       "available": true,
       "doctor": {
-        "id": 5
+        "id": 1
       }
     },
     {
       "id": 12,
       "patientId": null,
-      "doctorId": 6,
-      "date": "2024-01-30",
-      "time": "11:00 AM",
+      "doctorId": 1,
+      "date": "2024-01-31",
+      "time": "08:00 AM",
       "available": true,
       "doctor": {
-        "id": 6
+        "id": 1
       }
     },
     {
       "id": 13,
       "patientId": null,
       "doctorId": 1,
-      "date": "2024-02-05",
-      "time": "10:00 AM",
+      "date": "2024-02-04",
+      "time": "03:00 PM",
       "available": true,
       "doctor": {
         "id": 1
@@ -231,108 +237,114 @@
     {
       "id": 14,
       "patientId": null,
-      "doctorId": 2,
-      "date": "2024-02-11",
-      "time": "02:30 PM",
-      "available": true,
-      "doctor": {
-        "id": 2
-      }
-    },
-    {
-      "id": 15,
-      "patientId": null,
-      "doctorId": 3,
-      "date": "2024-02-19",
-      "time": "01:15 PM",
-      "available": true,
-      "doctor": {
-        "id": 3
-      }
-    },
-    {
-      "id": 16,
-      "patientId": null,
-      "doctorId": 4,
-      "date": "2024-02-24",
-      "time": "09:45 AM",
-      "available": true,
-      "doctor": {
-        "id": 4
-      }
-    },
-    {
-      "id": 17,
-      "patientId": null,
-      "doctorId": 5,
-      "date": "2024-02-30",
-      "time": "03:30 PM",
-      "available": true,
-      "doctor": {
-        "id": 5
-      }
-    },
-    {
-      "id": 18,
-      "patientId": null,
-      "doctorId": 6,
-      "date": "2024-03-02",
-      "time": "11:00 AM",
-      "available": true,
-      "doctor": {
-        "id": 6
-      }
-    },
-    {
-      "id": 19,
-      "patientId": null,
-      "doctorId": 5,
-      "date": "2024-03-08",
-      "time": "03:30 PM",
-      "available": true,
-      "doctor": {
-        "id": 5
-      }
-    },
-    {
-      "id": 20,
-      "patientId": null,
-      "doctorId": 6,
-      "date": "2024-03-12",
-      "time": "11:00 AM",
-      "available": true,
-      "doctor": {
-        "id": 6
-      }
-    },
-    {
-      "id": 21,
-      "patientId": null,
-      "doctorId": 3,
-      "date": "2024-01-08",
-      "time": "01:15 PM",
-      "available": true,
-      "doctor": {
-        "id": 3
-      }
-    },
-    {
-      "id": 22,
-      "patientId": null,
       "doctorId": 1,
-      "date": "2024-01-10",
-      "time": "01:15 PM",
+      "date": "2024-02-08",
+      "time": "10:00 AM",
       "available": true,
       "doctor": {
         "id": 1
       }
     },
     {
+      "id": 15,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-02-12",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 16,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-02-16",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 17,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-02-20",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 18,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-02-24",
+      "time": "05:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 19,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-02-28",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 20,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-03-03",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 21,
+      "patientId": 1,
+      "doctorId": 1,
+      "date": "2023-12-14",
+      "time": "09:00 AM",
+      "available": false,
+      "doctor": {
+        "id": 1,
+        "name": "Dr. Smith",
+        "specialty": "Cardiologist",
+        "address": "567 Park Avenue New York 10022",
+        "conventioned": true,
+        "payment": "Cash / Credit Card",
+        "photo": "/assets/pictures/doctor1.jpg"
+      }
+    },
+    {
+      "id": 22,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2023-12-18",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
       "id": 23,
       "patientId": null,
       "doctorId": 2,
-      "date": "2024-01-23",
-      "time": "01:15 PM",
+      "date": "2023-12-22",
+      "time": "03:00 PM",
       "available": true,
       "doctor": {
         "id": 2
@@ -341,45 +353,1212 @@
     {
       "id": 24,
       "patientId": null,
-      "doctorId": 5,
-      "date": "2024-01-25",
-      "time": "01:15 PM",
+      "doctorId": 2,
+      "date": "2023-12-26",
+      "time": "02:00 PM",
       "available": true,
       "doctor": {
-        "id": 5
+        "id": 2
       }
     },
     {
       "id": 25,
-      "patientId": null,
-      "doctorId": 4,
-      "date": "2024-03-15",
-      "time": "01:15 PM",
-      "available": true,
+      "patientId": 3,
+      "doctorId": 2,
+      "date": "2023-12-02",
+      "time": "08:00 AM",
+      "available": false,
       "doctor": {
-        "id": 4
+        "id": 2,
+        "name": "Dr. Johnson",
+        "specialty": "Dermatologist",
+        "address": "789 Pine Street Washington DC 20001",
+        "conventioned": true,
+        "payment": "Cash",
+        "photo": "/assets/pictures/doctor2.jpg"
       }
     },
     {
       "id": 26,
       "patientId": null,
-      "doctorId": 1,
-      "date": "2024-03-22",
-      "time": "01:15 PM",
+      "doctorId": 2,
+      "date": "2024-01-03",
+      "time": "06:00 PM",
       "available": true,
       "doctor": {
-        "id": 1
+        "id": 2
       }
     },
     {
       "id": 27,
       "patientId": null,
       "doctorId": 2,
-      "date": "2024-03-30",
-      "time": "01:15 PM",
+      "date": "2024-01-07",
+      "time": "04:00 PM",
       "available": true,
       "doctor": {
         "id": 2
+      }
+    },
+    {
+      "id": 28,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-01-11",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 29,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-01-15",
+      "time": "05:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 30,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-01-19",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 31,
+      "patientId": 1,
+      "doctorId": 2,
+      "date": "2024-01-23",
+      "time": "08:00 AM",
+      "available": false,
+      "doctor": {
+        "id": 2,
+        "name": "Dr. Johnson",
+        "specialty": "Dermatologist",
+        "address": "789 Pine Street Washington DC 20001",
+        "conventioned": true,
+        "payment": "Cash",
+        "photo": "/assets/pictures/doctor2.jpg"
+      }
+    },
+    {
+      "id": 32,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-01-27",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 33,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-01-31",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 34,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-04",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 35,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-08",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 36,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-12",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 37,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-16",
+      "time": "05:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 38,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-20",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 39,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-24",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 40,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-28",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 41,
+      "patientId": 2,
+      "doctorId": 2,
+      "date": "2024-03-03",
+      "time": "03:00 PM",
+      "available": false,
+      "doctor": {
+        "id": 2,
+        "name": "Dr. Johnson",
+        "specialty": "Dermatologist",
+        "address": "789 Pine Street Washington DC 20001",
+        "conventioned": true,
+        "payment": "Cash",
+        "photo": "/assets/pictures/doctor2.jpg"
+      }
+    },
+    {
+      "id": 42,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-03-07",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 43,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2023-12-18",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 44,
+      "patientId": 2,
+      "doctorId": 3,
+      "date": "2023-12-06",
+      "time": "04:00 PM",
+      "available": false,
+      "doctor": {
+        "id": 3,
+        "name": "Dr. Davis",
+        "specialty": "General",
+        "address": "254 Broadway Street New York 10003",
+        "conventioned": true,
+        "payment": "Check / Credit card",
+        "photo": "/assets/pictures/doctor3.jpg"
+      }
+    },
+    {
+      "id": 45,
+      "patientId": 3,
+      "doctorId": 3,
+      "date": "2023-12-26",
+      "time": "04:00 PM",
+      "available": false,
+      "doctor": {
+        "id": 3,
+        "name": "Dr. Davis",
+        "specialty": "General",
+        "address": "254 Broadway Street New York 10003",
+        "conventioned": true,
+        "payment": "Check / Credit card",
+        "photo": "/assets/pictures/doctor3.jpg"
+      }
+    },
+    {
+      "id": 46,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2023-12-30",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 47,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-03",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 48,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-07",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 49,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-11",
+      "time": "05:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 50,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-15",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3,
+        "name": "Dr. Davis",
+        "specialty": "General",
+        "address": "254 Broadway Street New York 10003",
+        "conventioned": true,
+        "payment": "Check / Credit card",
+        "photo": "/assets/pictures/doctor3.jpg"
+      }
+    },
+    {
+      "id": 51,
+      "patientId": 3,
+      "doctorId": 3,
+      "date": "2024-01-19",
+      "time": "08:00 AM",
+      "available": false,
+      "doctor": {
+        "id": 3,
+        "name": "Dr. Davis",
+        "specialty": "General",
+        "address": "254 Broadway Street New York 10003",
+        "conventioned": true,
+        "payment": "Check / Credit card",
+        "photo": "/assets/pictures/doctor3.jpg"
+      }
+    },
+    {
+      "id": 52,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-23",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 53,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-27",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 54,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-31",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 55,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-04",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 56,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-08",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 57,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-12",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 58,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-16",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 59,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-20",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 60,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-24",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 61,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-28",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 62,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-03-03",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 63,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-03-07",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 64,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2023-12-18",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4,
+        "name": "Dr. Morgan",
+        "specialty": "Dentist",
+        "address": "432 West 54th Street New York 10019",
+        "conventioned": true,
+        "payment": "Cash",
+        "photo": "/assets/pictures/doctor4.jpg"
+      }
+    },
+    {
+      "id": 65,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2023-12-22",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 66,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2023-12-26",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 67,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2023-12-30",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 68,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-03",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 69,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-07",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 70,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-11",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 71,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-15",
+      "time": "05:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 72,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-19",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 73,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-23",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 74,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-27",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 75,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-31",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 76,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-02-04",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 77,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-02-08",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 78,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-02-12",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 79,
+      "patientId": 3,
+      "doctorId": 4,
+      "date": "2024-02-16",
+      "time": "10:00 AM",
+      "available": false,
+      "doctor": {
+        "id": 4,
+        "name": "Dr. Morgan",
+        "specialty": "Dentist",
+        "address": "432 West 54th Street New York 10019",
+        "conventioned": true,
+        "payment": "Cash",
+        "photo": "/assets/pictures/doctor4.jpg"
+      }
+    },
+    {
+      "id": 80,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-02-20",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4,
+        "name": "Dr. Morgan",
+        "specialty": "Dentist",
+        "address": "432 West 54th Street New York 10019",
+        "conventioned": true,
+        "payment": "Cash",
+        "photo": "/assets/pictures/doctor4.jpg"
+      }
+    },
+    {
+      "id": 81,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-02-24",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 82,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-02-28",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 83,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-03-03",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 84,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-03-07",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 85,
+      "patientId": 1,
+      "doctorId": 5,
+      "date": "2023-12-18",
+      "time": "05:00 PM",
+      "available": false,
+      "doctor": {
+        "id": 5,
+        "name": "Dr. Anderson",
+        "specialty": "General",
+        "address": "106 Lexington Avenue New York 10016",
+        "conventioned": true,
+        "payment": "Cash / Credit card",
+        "photo": "/assets/pictures/doctor5.jpg"
+      }
+    },
+    {
+      "id": 86,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2023-12-22",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 87,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2023-12-26",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 88,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2023-12-30",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 89,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-03",
+      "time": "05:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 90,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-07",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 91,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-11",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 92,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-15",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 93,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-19",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 94,
+      "patientId": 2,
+      "doctorId": 5,
+      "date": "2024-01-23",
+      "time": "11:00 AM",
+      "available": false,
+      "doctor": {
+        "id": 5,
+        "name": "Dr. Anderson",
+        "specialty": "General",
+        "address": "106 Lexington Avenue New York 10016",
+        "conventioned": true,
+        "payment": "Cash / Credit card",
+        "photo": "/assets/pictures/doctor5.jpg"
+      }
+    },
+    {
+      "id": 95,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-27",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 96,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-31",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 97,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-02-04",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 98,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-02-08",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 99,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-02-12",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 100,
+      "patientId": 1,
+      "doctorId": 5,
+      "date": "2024-02-16",
+      "time": "08:00 AM",
+      "available": false,
+      "doctor": {
+        "id": 5,
+        "name": "Dr. Anderson",
+        "specialty": "General",
+        "address": "106 Lexington Avenue New York 10016",
+        "conventioned": true,
+        "payment": "Cash / Credit card",
+        "photo": "/assets/pictures/doctor5.jpg"
+      }
+    },
+    {
+      "id": 101,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-02-20",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 102,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-02-24",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 103,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-02-28",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 104,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-03-03",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 105,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-03-07",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 106,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2023-12-18",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 107,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2023-12-22",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 108,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2023-12-26",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 109,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2023-12-30",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 110,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-03",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 111,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-07",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 112,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-11",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 113,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-15",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 114,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-19",
+      "time": "08:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 115,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-23",
+      "time": "05:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 116,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-27",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 117,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-31",
+      "time": "02:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 118,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-02-04",
+      "time": "09:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 119,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-02-08",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 120,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-02-12",
+      "time": "04:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 121,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-02-16",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 122,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-02-20",
+      "time": "03:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 123,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-02-24",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 124,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-02-28",
+      "time": "06:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 125,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-03-03",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 126,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-03-07",
+      "time": "01:00 PM",
+      "available": true,
+      "doctor": {
+        "id": 6
       }
     }
   ]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AppointmentsService } from '../services/appointments.service';
 import { AuthService } from '../services/auth.service';
 import { CommonModule } from '@angular/common';
@@ -15,6 +15,7 @@ import { Appointment } from '../interfaces/appointment';
 export class MyAppointmentsComponent {
   myAppointments: any[] = [];
   myPatient: any;
+  todayDate: string = this.getCurrentDate();
 
   constructor(private appointmentService: AppointmentsService, private authService: AuthService) {
     this.myPatient = this.authService.user;
@@ -43,4 +44,18 @@ export class MyAppointmentsComponent {
       }
       )
   }
+  getCurrentDate(): string {
+    const currentDate = new Date();
+  
+    // Get year, month, and day components
+    const year = currentDate.getFullYear();
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+    const day = currentDate.getDate().toString().padStart(2, '0');
+  
+    // Assemble the date in "yyyy-mm-dd" format
+    const formattedDate = `${year}-${month}-${day}`;
+  
+    return formattedDate;
+  }
+
 }

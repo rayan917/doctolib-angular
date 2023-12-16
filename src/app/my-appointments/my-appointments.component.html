@@ -20,7 +20,7 @@
           </thead>
           <tbody class="text-gray-600 text-sm font-light">
             <tr *ngFor="let appointment of myAppointments">
-              <app-appointment-detail [appointment]="appointment" [patient]="myPatient" (onCancelAppointment)="handleCancelAppointment($event)"></app-appointment-detail>
+              <app-appointment-detail  [appointment]="appointment" [patient]="myPatient" (onCancelAppointment)="handleCancelAppointment($event)"></app-appointment-detail>
             </tr>
           </tbody>
         </table>
