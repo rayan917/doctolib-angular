@@ -10,13 +10,13 @@ DoctoLib est une application Angular conçue pour permettre aux utilisateurs de 
 
 Caractéristiques clés :
 
-Connexion
-Inscription
-Affichage des rendez-vous disponibles
-Prise de rendez-vous
-Annulation de rendez-vous
-Affichage détaillé des informations des médecins
-Page de profil de l'utilisateur avec édition de profil
+- Connexion
+- Inscription
+- Affichage des rendez-vous disponibles
+- Prise de rendez-vous
+- Annulation de rendez-vous
+- Affichage détaillé des informations des médecins
+- Page de profil de l'utilisateur avec édition de profil
 
 Utilisation d'@Input et @Output :
 Les fonctionnalités d'affichage de mes rendez-vous utilisent les directives @Input et @Output, notamment dans la partie détaillée des rendez-vous.
@@ -24,10 +24,10 @@ Les fonctionnalités d'affichage de mes rendez-vous utilisent les directives @In
 Validators personnalisés :
 Plusieurs validateurs personnalisés ont été développés, dont :
 
-Vérification des caractères spéciaux
-Vérification de la validité d'une adresse e-mail
-Confirmation du mot de passe par rapport à la saisie précédente
-Validation pour s'assurer que le champ saisi est un chiffre
+- Vérification des caractères spéciaux
+- Vérification de la validité d'une adresse e-mail
+- Confirmation du mot de passe par rapport à la saisie précédente
+- Validation pour s'assurer que le champ saisi est un chiffre
 
 Pipes personnalisés :
 Divers pipes ont été créés, parmi lesquels :
