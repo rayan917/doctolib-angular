@@ -150,6 +150,237 @@
       "doctor": {
         "id": 6
       }
+    },
+    {
+      "id": 7,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-01-05",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 8,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-01-06",
+      "time": "02:30 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 9,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-10",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 10,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-01-13",
+      "time": "09:45 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 11,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-20",
+      "time": "03:30 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 12,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-01-30",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 13,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-02-05",
+      "time": "10:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 14,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-02-11",
+      "time": "02:30 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 15,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-02-19",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 16,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-02-24",
+      "time": "09:45 AM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 17,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-02-30",
+      "time": "03:30 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 18,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-03-02",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 19,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-03-08",
+      "time": "03:30 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 20,
+      "patientId": null,
+      "doctorId": 6,
+      "date": "2024-03-12",
+      "time": "11:00 AM",
+      "available": true,
+      "doctor": {
+        "id": 6
+      }
+    },
+    {
+      "id": 21,
+      "patientId": null,
+      "doctorId": 3,
+      "date": "2024-01-08",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 3
+      }
+    },
+    {
+      "id": 22,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-01-10",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 23,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-01-23",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
+    },
+    {
+      "id": 24,
+      "patientId": null,
+      "doctorId": 5,
+      "date": "2024-01-25",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 5
+      }
+    },
+    {
+      "id": 25,
+      "patientId": null,
+      "doctorId": 4,
+      "date": "2024-03-15",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 4
+      }
+    },
+    {
+      "id": 26,
+      "patientId": null,
+      "doctorId": 1,
+      "date": "2024-03-22",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 1
+      }
+    },
+    {
+      "id": 27,
+      "patientId": null,
+      "doctorId": 2,
+      "date": "2024-03-30",
+      "time": "01:15 PM",
+      "available": true,
+      "doctor": {
+        "id": 2
+      }
     }
   ]
 }
