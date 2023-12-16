@@ -1,7 +1,7 @@
 # DoctoLib
 
 Membres du groupe :
-- Mathis Talby
+- Mathis Talbi
 - Jérémy Weltmann
 - Rayan Mamache
 
