@@ -1,9 +1,9 @@
 # DoctoLib
 
 Membres du groupe :
-Mathis Talby
-Jérémy Weltmann
-Rayan Mamache
+- Mathis Talby
+- Jérémy Weltmann
+- Rayan Mamache
 
 Résumé :
 DoctoLib est une application Angular conçue pour permettre aux utilisateurs de planifier des rendez-vous médicaux, s'inspirant du modèle de Doctolib. Les fonctionnalités développées comprennent la connexion, l'inscription, l'affichage des rendez-vous disponibles, la prise de rendez-vous, l'annulation de rendez-vous, l'affichage détaillé des informations des médecins, et la page de profil de l'utilisateur avec la possibilité d'éditer son profil.
